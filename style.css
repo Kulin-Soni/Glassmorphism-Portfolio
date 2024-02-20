@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+  background: #000;
+  position: relative;
+  overflow: none;
+  background: url('./assets/background.gif') no-repeat fixed center;
+  transition: ease 0.5s;
+}
+::selection {
+  color: #fff;
+  background: transparent;
+}
+
+hr {
+  border: 0.2px solid white;
+  box-shadow: 0 0 5px 0 #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  height: 70vh;
+  width: 60vw;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 2rem 0 2rem 0;
+  display: grid;
+  padding: 2rem;
+  scale: 0.9;
+  overflow: hidden;
+  transition: scale cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s, border-radius ease 0.5s;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 80rem;
+  background: white;
+  transform: rotate(-45deg);
+  right: 0px;
+  top: -850px;
+  transition: ease 1s;
+  filter: blur(70px);
+
+}
+
+.card:hover {
+  scale: 1;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.card:hover:before {
+  top: 450px;
+  right: 400px;
+}
+
+.elements {
+  display: grid;
+  grid-template-rows: 2fr 2fr 0.6fr 0.8fr 0.8fr 0.8fr;
+  grid-template-columns: 100%;
+  grid-auto-flow: column;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  padding: 2px;
+  transition: all ease 0.5s;
+  border-radius: 1.1rem;
+  overflow: auto;
+}
+
+.elements>* {
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.elements span:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.elements span:nth-child(1) section:nth-child(1) {
+  margin-right: 7px;
+}
+.elements span:nth-child(1) section:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7px;
+}
+
+#pfp {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 9rem;
+  background: url('https://us-east-1.tixte.net/uploads/gripz.likes.cash/kulin_soni.jpg') fixed no-repeat center;
+  background-size: cover;
+}
+#pfp:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: inherit;
+  background-size: inherit;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+#name,
+#gen,
+#description {
+  text-align: center;
+  color: #fff;
+  font-family: 'Poppins';
+  text-shadow: 0 0 15px #fff;
+}
+
+#name {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#gen {
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+#description {
+  font-family: 'Pacifico';
+  font-size: calc(2cqw + 5px);
+  overflow: auto;
+  width: 100%;
+}
+
+.elements span:nth-child(3) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon-border {
+  aspect-ratio: 1 / 1;
+  width: 30px;
+  border-radius: 9rem;
+  padding: 9px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease 0.5s;
+  border: 1px solid transparent;
+}
+.icon-border:hover {
+  background: transparent;
+  border: 1px solid white;
+}
+.icon-border:active {
+  fill: #000 !important;
+  background: #fff;
+  scale: 0.9;
+}
+.icons {
+  fill: #fff;
+}
+
+.elements > span:nth-child(4), .elements > span:nth-child(5), .elements > span:nth-child(6) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+}
+.redirects {
+  display: flex;
+  width: 90%;
+  height: 75%;
+  border-radius: 10rem;
+  background: inherit;
+  border: 2px solid #fff;
+  color: inherit;
+  font-family: 'Poppins';
+  font-size: 3cqw;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-shadow: 0 0 0 0 transparent, inset 0 0 0 0 transparent;
+  transition: ease 0.5s, scale ease 0.2s;
+}
+.redirects:hover {
+  box-shadow: 0 0 10px 0 #fff, inset 0 0 10px 0 #fff;
+}
+.redirects:active {
+  scale: 0.9;
+}
+.redirects > svg {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#popUp {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  width: 90vw;
+  height: 80vh;
+  position: absolute;
+  opacity: 0;
+  transition: ease 0.2s;
+  padding: 1rem;
+  border-radius: 1rem;
+  scale: 0;
+}
+
+#popUp > div {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 9fr;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+}
+#nameofpage {
+  text-align: center;
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 5cqw;
+}
+
+#closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#contentOfPop {
+  font-family: 'Poppins';
+  color: #fff;
+  font-weight: 200;
+  font-size: 3cqw;
+}
