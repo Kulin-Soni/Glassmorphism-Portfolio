@@ -21,7 +21,7 @@ body {
   background: #000;
   position: relative;
   overflow: none;
-  background: url('./assets/background.gif') no-repeat fixed center;
+  background: url('https://us-east-1.tixte.net/uploads/gripzvisx.tixte.co/background2.gif') no-repeat fixed center;
   transition: ease 0.5s;
 }
 ::selection {
