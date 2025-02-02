@@ -1,2 +1,2 @@
 # Glassmorphism-Portfolio
-A portfolio that uses glassmorphism effect
+This is a simple portfolio that has glassmorphism effect.
